@@ -14,8 +14,11 @@ Second, there are also some missing data in product category 2 and 3. For exampl
 #
 ```
 
-BF$Product_Category_2[is.na(BlackFriday$Product_Category_2)] <- 0
-BF$Product_Category_3[is.na(BlackFriday$Product_Category_3)] <- 0
-
-
+install.packages("tidyverse")
+library("Tidyverse")
+BF <- read_csv("BlackFriday.csv")
+install.packages("ggplot2")
+library(ggplot2)
+ggplot(BF,aes(BF$Age,BF$Purchase))+geom_bar(stat = "identity")
+BF$Product_Category_2<-NULL
 
