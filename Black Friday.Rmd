@@ -19,6 +19,9 @@ library("Tidyverse")
 BF <- read_csv("BlackFriday.csv")
 install.packages("ggplot2")
 library(ggplot2)
+
 ggplot(BF,aes(BF$Age,BF$Purchase))+geom_bar(stat = "identity")
+
 BF$Product_Category_2<-NULL
+BF$Product_Category_3<-NULL
 
